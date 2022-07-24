@@ -1,13 +1,12 @@
 import React, { useEffect } from "react";
 
-import { SignIn } from "./src/screens/auth/signin";
-
 import { THEME } from "./src/theme/theme";
 
 import { NativeBaseProvider, StatusBar } from "native-base";
 
 import * as SplashScreen from "expo-splash-screen";
 import { useFonts, Roboto_700Bold, Roboto_400Regular } from "@expo-google-fonts/roboto";
+import { Routes } from "./src/routes";
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
@@ -41,7 +40,7 @@ export default function App() {
                 backgroundColor="transparent"
                 translucent // faz a status bar ficar da cor do app abaixo dela
             />
-            <SignIn />
+            <Routes />
         </NativeBaseProvider>
     );
 }
